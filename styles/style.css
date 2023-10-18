@@ -1,0 +1,158 @@
+/* @import url("https://fonts.googleapis.com/css?family=Ruslan+Display:regular"); */
+@import url(https://fonts.googleapis.com/css?family=Kelly+Slab:regular);
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+img {
+  max-width: 100%;
+}
+:active,
+:hover,
+:focus {
+  outline: none;
+}
+
+body {
+  background-image: url('../images/brown-texture\ \(1\).jpg');
+  color: rgb(20, 20, 20);
+  font-family: 'Kelly Slab';
+  line-height: 1;
+}
+
+body.active {
+  background-attachment: fixed;
+  background-position: right;
+  background-image: url('../images/bread-cooked-meat.jpg');
+  background-size: cover;
+  color: white;
+}
+
+.bold {
+  font-weight: 700;
+}
+.wrapper {
+  min-width: 320px;
+  overflow: hidden;
+}
+body.active .menu {
+  background: rgba(0, 0, 0, 0.75);
+}
+body.active .menu__container {
+  padding: 30px 15px;
+  position: relative;
+}
+body.active .menu__container::after {
+  content: '';
+  width: calc(100% - 30px);
+  height: 1px;
+  border-radius: 1px;
+  background: rgba(255, 255, 255, 0.212);
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+}
+body.active .menu__sub-title {
+  border-bottom: 3px solid rgb(255, 181, 21);
+}
+body.active .menu__point-price {
+  padding-bottom: 2px;
+  border-bottom: 2px solid rgb(255, 181, 21);
+}
+body.active .menu__point-info {
+  opacity: 0.7;
+}
+/*   */
+.menu {
+  padding: 30px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.menu__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu__title {
+  font-size: 50px;
+}
+.menu__icon {
+  margin: 15px 0px 20px;
+}
+.menu__sub-title {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.menu__container {
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 765px;
+  margin: 0 auto;
+}
+.menu__section-title {
+  font-size: 26px;
+  text-align: center;
+}
+.menu__list {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu__point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+.menu__point-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 65px;
+  gap: 12px;
+  align-items: center;
+}
+.menu__point-title {
+  line-height: 1.1;
+}
+.menu__point-info {
+  font-size: 15px;
+  line-height: 1.5;
+  width: 100%;
+}
+.menu__point-weight, .menu__point-price {
+  font-size: 17px;
+  text-align: center;
+}
+.menu__point-image-container {
+  padding: 20px 0px;
+}
+.menu__point-image {
+  height: 300px;
+}
+.change-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: 700;
+  font-size: 20px;
+}
