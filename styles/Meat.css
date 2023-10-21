@@ -37,7 +37,8 @@ a {
   position: fixed;
   width: 100%;
   height: 1200px;
-  background-position: right;
+  padding-top: 300px;
+  background-position: center;
   background-image: url('../images/background.jpg');
   background-size: cover;
   z-index: -1;
@@ -46,10 +47,16 @@ a {
   min-width: 320px;
   overflow: hidden;
 }
-.menu__section {
+.menu__container {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 765px;
+  margin: 0px auto;
+  padding: 30px 15px;
 }
-.menu__section:not(:last-of-type)::after {
+.menu__container::after {
   content: '';
   width: calc(100% - 30px);
   height: 2px;
@@ -59,14 +66,6 @@ a {
   bottom: 0%;
   right: 50%;
   transform: translateX(50%);
-}
-.menu__container {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  max-width: 765px;
-  margin: 0px auto;
-  padding: 30px 15px;
 }
 .menu {
   padding: 30px 0px;
