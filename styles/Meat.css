@@ -36,7 +36,7 @@ a {
 .bg {
   position: fixed;
   width: 100%;
-  height: 2300px;
+  height: 1200px;
   background-position: right;
   background-image: url('../images/background.jpg');
   background-size: cover;
@@ -46,16 +46,10 @@ a {
   min-width: 320px;
   overflow: hidden;
 }
-.menu__container {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  max-width: 765px;
-  margin: 0px auto;
-  padding: 30px 15px;
+.menu__section {
   position: relative;
 }
-.menu__container::after {
+.menu__section:not(:last-of-type)::after {
   content: '';
   width: calc(100% - 30px);
   height: 2px;
@@ -65,6 +59,14 @@ a {
   bottom: 0%;
   right: 50%;
   transform: translateX(50%);
+}
+.menu__container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 765px;
+  margin: 0px auto;
+  padding: 30px 15px;
 }
 .menu {
   padding: 30px 0px;
@@ -128,13 +130,15 @@ a {
   font-weight: 700;
 }
 .menu__point-image-container {
-  margin: 15px auto;
-  height: 300px;
+  margin: 0px auto;
   aspect-ratio: 1;
-  display: none;
+  height: 0px;
+  overflow: hidden;
+  transition: 0.3s;
 }
 .menu__point-image-container.active {
-  display: block;
+  margin: 15px auto;
+  height: 300px;
 }
 .menu__point-image {
   object-fit: cover;
@@ -146,6 +150,9 @@ a {
   font-size: 16px;
   text-decoration: underline;
   position: relative;
+}
+.menu__point-button:active {
+  opacity: 0.5;
 }
 .menu__point-button::after {
   content: '';
