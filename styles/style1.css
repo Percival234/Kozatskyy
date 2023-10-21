@@ -20,43 +20,23 @@ button {
   font-family: inherit;
   color: inherit;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.nav {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  padding: 5px;
+}
 .wrapper {
   background-image: url('../images/page-texture.jpg');
   min-width: 320px;
   overflow: hidden;
-}
-.wrapper.active {
-  background-attachment: fixed;
-  background-position: right;
-  background-image: url('../images/background.jpg');
-  background-size: cover;
-  color: white;
-}
-.wrapper.active .menu {
-  background: rgba(0, 0, 0, 0.725);
-}
-.wrapper.active .menu__container {
-  padding: 30px 15px;
-  position: relative;
-}
-.wrapper.active .menu__container::after {
-  content: '';
-  width: calc(100% - 30px);
-  height: 2px;
-  border-radius: 1px;
-  background: rgba(255, 255, 255, 0.4);
-  position: absolute;
-  bottom: 0%;
-  right: 50%;
-  transform: translateX(50%);
-}
-.wrapper.active .menu__sub-title, .wrapper.active .menu__point-price {
-  text-decoration: underline;
-  text-decoration-thickness: 3px ;
-  text-decoration-color: rgb(255, 181, 21);
-}
-.wrapper.active .menu__point-info {
-  opacity: 0.7;
 }
 .menu {
   padding: 30px 0px;
@@ -152,16 +132,6 @@ button {
   border-width: 5px 5px 0 5px;
   border-color: rgb(20, 20, 20) transparent transparent transparent;
 }
-.wrapper.active .menu__point-button::after {
-  border-color: rgb(172, 172, 172) transparent transparent transparent;
-}
 .menu__point-button.active::after {
   transform: rotate(180deg);
-}
-.change-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-weight: 700;
-  font-size: 20px;
 }
