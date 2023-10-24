@@ -52,12 +52,15 @@ function menuPoint(point) {
       point.image
         ? `<button type="button" class="point__button">відкрити фото</button>
           <div class="point__image-container">
-            <img class="point__image" src="https://lh3.google.com/u/0/d/177xPDNN3A8h5oPs8vygfccRgPowfdKX_=w1850-h943-iv2" alt="meal" />
+            <img class="point__image" src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaD_NeOmf9b-VrPFz1Svl_vyJH6D2CrBHDxHpMfrFtRmJgShi0DA95Mr3ZFqHrsXqxbhVufGXqeJcWojYAnr_JUq2mK_4g=w1850-h943"  alt="meal" />
           </div>`
         : ''
     }
   </div>`;
 }
+
+// https://drive.google.com/file/d/177xPDNN3A8h5oPs8vygfccRgPowfdKX_/view?usp=sharing посилання коли жмеш поділитись
+// https://drive.google.com/file/d/177xPDNN3A8h5oPs8vygfccRgPowfdKX_/view?usp=drive_link посилання на картнку не відкриту
 
 function menuSection(category, list) {
   const points = [];
