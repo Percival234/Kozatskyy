@@ -52,7 +52,7 @@ function menuPoint(point) {
       point.image
         ? `<button type="button" class="point__button">відкрити фото</button>
           <div class="point__image-container">
-            <img class="point__image" src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaD_NeOmf9b-VrPFz1Svl_vyJH6D2CrBHDxHpMfrFtRmJgShi0DA95Mr3ZFqHrsXqxbhVufGXqeJcWojYAnr_JUq2mK_4g=w1850-h943"  alt="meal" />
+            <img class="point__image" src="https://lh3.google.com/u/0/d/1bVaKFyTWDTea244RtPbOrPo0PyXWcLR_=w1850-h943-iv1"   alt="meal" />
           </div>`
         : ''
     }
