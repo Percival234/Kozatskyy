@@ -7,17 +7,17 @@
   border: 0px;
   box-sizing: border-box;
 }
-img {
-  max-width: 100%;
-}
-h1, h2, h3, h4 {
-  font-weight: 500;
-}
 body {
   color: rgb(245, 245, 245);
   font-family: 'Lobster', sans-serif;
   font-size: 16px;
   line-height: 1;
+}
+img {
+  max-width: 100%;
+}
+h1, h2, h3, h4 {
+  font-weight: 500;
 }
 p {
   line-height: 1.5;
@@ -30,7 +30,7 @@ button {
 }
 .wrapper {
   background-image: url('../images/pattern.jpg');
-  background-size: 500px;
+  background-size: 300px;
   min-width: 320px;
   min-height: 100vh;
   overflow: hidden;
@@ -39,6 +39,9 @@ button {
   padding: 30px 0px;
   display: flex;
   flex-direction: column;
+}
+.menu.hidden {
+  opacity: 0;
 }
 .header {
   display: flex;
@@ -89,6 +92,7 @@ button {
   text-align: right;
 }
 .point__image-container {
+  position: relative;
   margin: 0px auto;
   aspect-ratio: 1;
   height: 0px;
@@ -129,7 +133,18 @@ button {
   transform: rotate(180deg);
 }
 .loader {
-  margin: 100px auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader::after {
+  content: '';
+  display: block;
   width: 30px;
   aspect-ratio: 1;
   border: 3px solid rgba(177, 177, 177, 0.25);
